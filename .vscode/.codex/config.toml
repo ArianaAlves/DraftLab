@@ -1,0 +1,16 @@
+[project]
+name = "DriftLab"
+description = "Survival game with crafting, building and Twitch integration"
+
+[permissions]
+allow_write = true
+allow_shell = true
+
+[paths]
+root = "./"
+scripts = "Assets/_Project/Scripts"
+assets = "Assets/_Project"
+
+[rules]
+no_delete_core = true
+limit_to_project = true
