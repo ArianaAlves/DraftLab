@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
@@ -61,14 +62,19 @@ public class InventorySystem : MonoBehaviour
             return "Inventario: vazio";
         }
 
-        string inventoryText = "Inventario:";
+        StringBuilder inventoryText = new StringBuilder("Inventario:");
 
         foreach (KeyValuePair<string, int> entry in items)
         {
-            inventoryText += "\n" + entry.Key + ": " + entry.Value;
+            inventoryText.Append("\n").Append(entry.Key).Append(": ").Append(entry.Value);
         }
 
-        return inventoryText;
+        return inventoryText.ToString();
+    }
+
+    public bool TryConsumeItem(string itemId, int amount)
+    {
+        return RemoveItem(itemId, amount);
     }
 
     private void NotifyUI()
