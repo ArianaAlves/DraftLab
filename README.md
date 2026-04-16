@@ -8,6 +8,7 @@ Base inicial para um prototipo de jogo survival em Unity.
 - Scripts base de movimento, coleta, crafting e UI
 - Base de sistemas para personagem, roupas e missoes
 - Base de menu inicial, lobby e visual de roupa por cor
+- Consumo simples de comida e agua por botoes
 - Guia rapido para montar a primeira cena
 - `.gitignore` pronto para Unity
 

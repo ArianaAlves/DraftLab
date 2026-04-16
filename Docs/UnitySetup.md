@@ -47,6 +47,7 @@
 3. Encoste nos itens.
 4. Confirme se o contador sobe, o inventario atualiza e os itens desaparecem.
 5. Observe fome e sede diminuindo com o tempo.
+6. Se criar botoes de acao, teste `DrinkWater()`, `EatFood()` e `CraftFilter()`.
 
 ## 6. Proximo passo recomendado
 
@@ -91,3 +92,23 @@ Os scripts abaixo ja deixam a base pronta para a proxima etapa:
 6. Arraste os tres paineis para o `TitleScreenUI`.
 7. Crie botoes para `ShowTitle()`, `ShowLobby()` e `ShowCustomization()`.
 8. Se quiser um resumo da selecao atual, adicione `MainMenuStatusUI` ao `GameUI` e ligue um `Text`.
+
+## 10. Itens e acoes
+
+1. Duplique o `WaterItem` para criar `FoodItem` e `CharcoalItem`.
+2. No `CollectItem`, configure:
+   - `WaterItem > Item Id = Water`
+   - `FoodItem > Item Id = Food`
+   - `CharcoalItem > Item Id = Charcoal`
+3. Crie um objeto vazio `ActionUI`.
+4. Adicione `ActionButtonsUI`.
+5. Crie tres botoes no `Canvas`:
+   - `Drink Water`
+   - `Eat Food`
+   - `Craft Filter`
+6. Arraste o `CraftManager` para o campo `Craft System` do `ActionButtonsUI`.
+7. Em cada botao, use o evento `On Click()` para chamar:
+   - `DrinkWater()`
+   - `EatFood()`
+   - `CraftFilter()`
+8. Se quiser feedback visual, crie um `Text` chamado `ActionFeedbackText` e ligue no `ActionButtonsUI`.
